@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🎉 30-Celebrations & Parties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ccc;
+            vertical-align: middle;
+        }
+        button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 6px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #pagination button {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🎉 30-Celebrations & Parties</h2>
+
+<div style="text-align:center; margin: 20px 0;">
+    <a href="index_30_categories_grid5.html" style="
+        padding: 12px 24px;
+        background-color: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 20px;
+    ">🏠 Home</a>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>English</th>
+            <th>Dutch</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Voeg hier je zinnen toe -->
+    </tbody>
+</table>
+
+<div id="pagination"></div>
+
+<script>
+function playAudio(id) {
+    const audios = document.querySelectorAll("audio");
+    audios.forEach(a => {
+        if (a.id !== id) a.pause();
+    });
+    const audio = document.getElementById(id);
+    audio.currentTime = 0;
+    audio.play();
+}
+
+const rowsPerPage = 17;
+const rows = Array.from(document.querySelectorAll("tbody tr"));
+const totalPages = Math.ceil(rows.length / rowsPerPage);
+let currentPage = 1;
+
+function showPage(page) {
+    currentPage = page;
+    rows.forEach((row, index) => {
+        row.style.display = (index >= (page - 1) * rowsPerPage && index < page * rowsPerPage) ? '' : 'none';
+    });
+    renderPagination();
+}
+
+function renderPagination() {
+    const paginationDiv = document.getElementById("pagination");
+    paginationDiv.innerHTML = `
+        <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''}>⬅ Previous</button>
+        Page ${currentPage} of ${totalPages}
+        <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''}>Next ➡</button>
+    `;
+}
+
+function changePage(direction) {
+    const newPage = currentPage + direction;
+    if (newPage >= 1 && newPage <= totalPages) {
+        showPage(newPage);
+    }
+}
+
+showPage(1);
+</script>
+
+</body>
+</html>

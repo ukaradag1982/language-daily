@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Celebrations with Audio</title>
+    <style>
+    h2 {
+        background-color: #007BFF;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ccc;
+            vertical-align: middle;
+        }
+        button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 6px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🎉 Celebrations & Parties – English & Dutch with Audio</h2>
+<div style="text-align:center; margin: 20px 0;">
+    <a href="index-dailySentences.html" style="
+        padding: 12px 24px;
+        background-color: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 20px;
+    ">🏠 Home</a>
+</div>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>English</th>
+            <th>Dutch</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><button onclick="playAudio('en1')">🎧</button> Hello!
+                <audio id="en1" src="audio-eng-greetings/1-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl1')">🎧</button> We zijn een verjaardagsfeest aan het plannen.
+                <audio id="nl1" src="audio/1-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en2')">🎧</button> Good morning! 
+                <audio id="en2" src="audio-eng-greetings/2-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl2')">🎧</button> Ze versierde de kamer met ballonnen.
+                <audio id="nl2" src="audio/2-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en3')">🎧</button> Good afternoon!
+                <audio id="en3" src="audio-eng-greetings/3-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl3')">🎧</button> Hij kocht een cadeau voor zijn vriend.
+                <audio id="nl3" src="audio/3-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en4')">🎧</button> Good evening!
+                <audio id="en4" src="audio-eng-greetings/4-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl4')">🎧</button> Ik pakte het cadeau in met kleurrijk papier.
+                <audio id="nl4" src="audio/4-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en5')">🎧</button> Good night! 
+                <audio id="en5" src="audio-eng-greetings/5-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl5')">🎧</button> Ze hebben vorige week de uitnodigingen verstuurd.
+                <audio id="nl5" src="audio/5-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en6')">🎧</button> How are you?
+                <audio id="en6" src="audio-eng-greetings/6-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl6')">🎧</button> Ze bakte een chocoladetaart.
+                <audio id="nl6" src="audio/6-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en7')">🎧</button> I’m fine, thank you.
+                <audio id="en7" src="audio-eng-greetings/7-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl7')">🎧</button> We zongen samen "Happy Birthday".
+                <audio id="nl7" src="audio/7-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en8')">🎧</button> What’s your name? 
+                <audio id="en8" src="audio-eng-greetings/8-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl8')">🎧</button> Hij bracht een toost uit op het gelukkige stel.
+                <audio id="nl8" src="audio/8-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en9')">🎧</button> My name is Sarah. 
+                <audio id="en9" src="audio-eng-greetings/9-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl9')">🎧</button> Ik droeg een chique outfit naar het feest.
+                <audio id="nl9" src="audio/9-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en1')">🎧</button> Hello!
+                <audio id="en1" src="audio-eng-greetings/1-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl1')">🎧</button> We zijn een verjaardagsfeest aan het plannen.
+                <audio id="nl1" src="audio/1-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en2')">🎧</button> Good morning! 
+                <audio id="en2" src="audio-eng-greetings/2-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl2')">🎧</button> Ze versierde de kamer met ballonnen.
+                <audio id="nl2" src="audio/2-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en3')">🎧</button> Good afternoon!
+                <audio id="en3" src="audio-eng-greetings/3-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl3')">🎧</button> Hij kocht een cadeau voor zijn vriend.
+                <audio id="nl3" src="audio/3-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en4')">🎧</button> Good evening!
+                <audio id="en4" src="audio-eng-greetings/4-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl4')">🎧</button> Ik pakte het cadeau in met kleurrijk papier.
+                <audio id="nl4" src="audio/4-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en5')">🎧</button> Good night! 
+                <audio id="en5" src="audio-eng-greetings/5-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl5')">🎧</button> Ze hebben vorige week de uitnodigingen verstuurd.
+                <audio id="nl5" src="audio/5-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en6')">🎧</button> How are you?
+                <audio id="en6" src="audio-eng-greetings/6-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl6')">🎧</button> Ze bakte een chocoladetaart.
+                <audio id="nl6" src="audio/6-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en7')">🎧</button> I’m fine, thank you.
+                <audio id="en7" src="audio-eng-greetings/7-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl7')">🎧</button> We zongen samen "Happy Birthday".
+                <audio id="nl7" src="audio/7-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en8')">🎧</button> What’s your name? 
+                <audio id="en8" src="audio-eng-greetings/8-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl8')">🎧</button> Hij bracht een toost uit op het gelukkige stel.
+                <audio id="nl8" src="audio/8-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en9')">🎧</button> My name is Sarah. 
+                <audio id="en9" src="audio-eng-greetings/9-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl9')">🎧</button> Ik droeg een chique outfit naar het feest.
+                <audio id="nl9" src="audio/9-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en1')">🎧</button> Hello!
+                <audio id="en1" src="audio-eng-greetings/1-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl1')">🎧</button> We zijn een verjaardagsfeest aan het plannen.
+                <audio id="nl1" src="audio/1-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en2')">🎧</button> Good morning! 
+                <audio id="en2" src="audio-eng-greetings/2-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl2')">🎧</button> Ze versierde de kamer met ballonnen.
+                <audio id="nl2" src="audio/2-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en3')">🎧</button> Good afternoon!
+                <audio id="en3" src="audio-eng-greetings/3-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl3')">🎧</button> Hij kocht een cadeau voor zijn vriend.
+                <audio id="nl3" src="audio/3-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en4')">🎧</button> Good evening!
+                <audio id="en4" src="audio-eng-greetings/4-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl4')">🎧</button> Ik pakte het cadeau in met kleurrijk papier.
+                <audio id="nl4" src="audio/4-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en5')">🎧</button> Good night! 
+                <audio id="en5" src="audio-eng-greetings/5-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl5')">🎧</button> Ze hebben vorige week de uitnodigingen verstuurd.
+                <audio id="nl5" src="audio/5-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en6')">🎧</button> How are you?
+                <audio id="en6" src="audio-eng-greetings/6-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl6')">🎧</button> Ze bakte een chocoladetaart.
+                <audio id="nl6" src="audio/6-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en7')">🎧</button> I’m fine, thank you.
+                <audio id="en7" src="audio-eng-greetings/7-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl7')">🎧</button> We zongen samen "Happy Birthday".
+                <audio id="nl7" src="audio/7-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en8')">🎧</button> What’s your name? 
+                <audio id="en8" src="audio-eng-greetings/8-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl8')">🎧</button> Hij bracht een toost uit op het gelukkige stel.
+                <audio id="nl8" src="audio/8-2.mp3"></audio></td>
+        </tr>
+        <tr>
+            <td><button onclick="playAudio('en9')">🎧</button> My name is Sarah. 
+                <audio id="en9" src="audio-eng-greetings/9-1.mp3"></audio></td>
+            <td><button onclick="playAudio('nl9')">🎧</button> Ik droeg een chique outfit naar het feest.
+                <audio id="nl9" src="audio/9-2.mp3"></audio></td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+function playAudio(id) {
+    const audios = document.querySelectorAll("audio");
+    audios.forEach(a => {
+        if (a.id !== id) a.pause();
+    });
+    const audio = document.getElementById(id);
+    audio.currentTime = 0;
+    audio.play();
+}
+</script>
+
+
+<div id="pagination"></div>
+
+<script>
+function playAudio(id) {
+    const audios = document.querySelectorAll("audio");
+    audios.forEach(a => {
+        if (a.id !== id) a.pause();
+    });
+    const audio = document.getElementById(id);
+    audio.currentTime = 0;
+    audio.play();
+}
+
+// PAGINATION SETUP
+const rowsPerPage = 17;
+const rows = Array.from(document.querySelectorAll("tbody tr"));
+const totalPages = Math.ceil(rows.length / rowsPerPage);
+let currentPage = 1;
+
+function showPage(page) {
+    currentPage = page;
+    rows.forEach((row, index) => {
+        row.style.display = (index >= (page - 1) * rowsPerPage && index < page * rowsPerPage) ? '' : 'none';
+    });
+    renderPagination();
+}
+
+function renderPagination() {
+    const paginationDiv = document.getElementById("pagination");
+    paginationDiv.innerHTML = `
+        <button onclick="changePage(-1)" ${currentPage === 1 ? 'disabled' : ''}>⬅ Previous</button>
+        Page ${currentPage} of ${totalPages}
+        <button onclick="changePage(1)" ${currentPage === totalPages ? 'disabled' : ''}>Next ➡</button>
+    `;
+}
+
+function changePage(direction) {
+    const newPage = currentPage + direction;
+    if (newPage >= 1 && newPage <= totalPages) {
+        showPage(newPage);
+    }
+}
+
+// Initialize first page
+showPage(1);
+</script>
+
+</body>
+</html>

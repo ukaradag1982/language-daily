@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#007BFF">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(function() {
+        console.log("Service Worker Registered");
+      });
+    }
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn Language with Daily Sentences</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #007BFF;
+      margin-bottom: 10px;
+      font-size: 36px;
+      text-transform: uppercase;
+    }
+    p.subtitle {
+      color: #444;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .search-box {
+      margin-bottom: 30px;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .category-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .category {
+      background-color: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 25px 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      transition: transform 0.2s, background-color 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .category:hover {
+      transform: translateY(-5px);
+      background-color: #e6f0ff;
+    }
+    .category span.icon {
+      font-size: 32px;
+      margin-top: 10px;
+      color: #007BFF;
+    }
+  </style>
+
+  <style>
+    body.dark {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    body.dark .category {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+    body.dark .category:hover {
+      background-color: #2a2a2a;
+    }
+    body.dark input[type="text"] {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border: 1px solid #444;
+    }
+    .dark-toggle {
+      font-size: 18px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+  <div id="darkNotice" style="display:none; position:fixed; top:80px; right:20px; background:#007BFF; color:white; padding:10px 16px; border-radius:8px; font-size:16px; box-shadow:0 2px 6px rgba(0,0,0,0.3);">🌙 Dark mode enabled</div>
+
+  <h1>Learn Language with Daily Sentences</h1>
+  <p class="subtitle">Choose a category to start learning useful everyday phrases.</p>
+
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Search categories..." onkeyup="filterCategories()" />
+  </div>
+
+  <div class="category-section" id="categoryList">
+    <a href="1-greetings-and-introductions.html" class="category">Greetings & Introductions <span class="icon">👋</span></a>
+<a href="2-daily-routine.html" class="category">Daily Routine <span class="icon">⏰</span></a>
+<a href="3-at-home.html" class="category">At Home <span class="icon">🏠</span></a>
+<a href="4-in-the-city.html" class="category">In the City <span class="icon">🏙️</span></a>
+<a href="5-at-school.html" class="category">At School <span class="icon">🏫</span></a>
+<a href="6-at-work.html" class="category">At Work <span class="icon">💼</span></a>
+<a href="7-at-the-store.html" class="category">At the Store <span class="icon">🛍️</span></a>
+<a href="8-at-the-doctor.html" class="category">At the Doctor <span class="icon">🏥</span></a>
+<a href="9-at-the-airport.html" class="category">At the Airport <span class="icon">✈️</span></a>
+<a href="10-at-the-supermarket.html" class="category">At the Supermarket <span class="icon">🛒</span></a>
+<a href="11-at-the-pharmacy.html" class="category">At the Pharmacy <span class="icon">💊</span></a>
+<a href="12-at-the-hospital.html" class="category">At the Hospital <span class="icon">🏨</span></a>
+<a href="13-at-the-post-office.html" class="category">At the Post Office <span class="icon">📮</span></a>
+<a href="14-at-the-bank.html" class="category">At the Bank <span class="icon">🏦</span></a>
+<a href="15-at-the-restaurant.html" class="category">At the Restaurant <span class="icon">🍽️</span></a>
+<a href="16-at-the-train-station.html" class="category">At the Train Station <span class="icon">🚉</span></a>
+<a href="17-making-appointments.html" class="category">Making Appointments <span class="icon">📅</span></a>
+<a href="18-transportation.html" class="category">Transportation <span class="icon">🚌</span></a>
+<a href="19-emergency-situations.html" class="category">Emergency Situations <span class="icon">🚨</span></a>
+<a href="20-weather-and-seasons.html" class="category">Weather & Seasons <span class="icon">⛅</span></a>
+<a href="21-hobbies-and-leisure.html" class="category">Hobbies & Leisure <span class="icon">🎨</span></a>
+<a href="22-talking-about-feelings.html" class="category">Talking About Feelings <span class="icon">💬</span></a>
+<a href="23-at-the-gym.html" class="category">At the Gym <span class="icon">🏋️</span></a>
+<a href="24-on-the-phone.html" class="category">On the Phone <span class="icon">📞</span></a>
+<a href="25-during-holidays.html" class="category">During Holidays <span class="icon">🏖️</span></a>
+<a href="26-in-case-of-illness.html" class="category">In Case of Illness <span class="icon">🤒</span></a>
+<a href="27-with-friends.html" class="category">With Friends <span class="icon">👫</span></a>
+<a href="28-at-the-hairdresser.html" class="category">At the Hairdresser <span class="icon">💇</span></a>
+<a href="29-in-the-bathroom.html" class="category">In the Bathroom <span class="icon">🛁</span></a>
+<a href="30-celebrations-and-parties.html" class="category">Celebrations & Parties <span class="icon">🎉</span></a>
+  </div>
+
+  <script>
+    function filterCategories() {
+      const input = document.getElementById("search");
+      const filter = input.value.toLowerCase();
+      const categories = document.getElementById("categoryList").getElementsByClassName("category");
+      for (let i = 0; i < categories.length; i++) {
+        const text = categories[i].textContent || categories[i].innerText;
+        categories[i].style.display = text.toLowerCase().includes(filter) ? "flex" : "none";
+      }
+    }
+  
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      const notice = document.getElementById('darkNotice');
+      notice.innerText = document.body.classList.contains('dark') ? '🌙 Dark mode enabled' : '☀️ Light mode enabled';
+      notice.style.display = 'block';
+      setTimeout(() => notice.style.display = 'none', 2000);
+    }
+
+    // Automatische dark mode op basis van tijd (na 19:00 uur)
+    window.onload = function () {
+      const hour = new Date().getHours();
+      if (hour >= 19 || hour <= 6) {
+        document.body.classList.add('dark');
+      }
+    };
+</script>
+
+
+</body>
+</html>
