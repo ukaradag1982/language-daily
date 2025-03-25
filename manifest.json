@@ -1,7 +1,7 @@
 {
   "name": "Language Daily",
   "short_name": "LanguageDaily",
-  "start_url": "index-dailySentences-darkmode-feedback.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007BFF",
