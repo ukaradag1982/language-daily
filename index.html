@@ -17,12 +17,30 @@
   <title>Learn Language with Daily Sentences</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f4f8;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-    }
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px; /* Basis tekstgrootte voor mobiele apparaten */
+}
+
+/* Vergroot de tekst voor kleinere schermen */
+@media screen and (max-width: 600px) {
+  .category-section {
+    font-size: 22px; /* Vergroot de tekst in de categorieën */
+  }
+  .category {
+    font-size: 24px; /* Vergroot de tekst in de knoppen */
+  }
+  h1 {
+    font-size: 30px; /* Vergroot de koptekst */
+  }
+  p.subtitle {
+    font-size: 20px; /* Vergroot de ondertitel */
+  }
+}
+
     h1 {
       color: #007BFF;
       margin-bottom: 10px;
